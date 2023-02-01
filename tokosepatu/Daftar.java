@@ -28,6 +28,7 @@ public class Daftar {
             ConnectMysql.insertAkun(id, ps,nm, jk,no, almt);
             System.out.println("ID Anda :"+ id);
             System.out.println("Password anda: " + ps);
+            Login.Login();
         }
         catch(Exception e){
             System.out.println("Error: " +e.getMessage());

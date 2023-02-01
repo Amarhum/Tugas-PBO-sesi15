@@ -4,7 +4,8 @@ import java.util.Scanner;
 
 public class Login {
      public static void Login() {
-        
+        String idA = "admin";
+        String psA = "admin";
         
         Scanner sc = new Scanner(System.in);
         
@@ -20,10 +21,12 @@ public class Login {
             if(idl.equals(ConnectMysql.getId(idl)) && psl.equals(ConnectMysql.getPs(psl))){
                 Beranda.berandaApp();
             }
+            else if(idl.equals(idA) && psl.equals(psA)){
+            Admin.adminApp();
+            }
             else{
-                System.out.println("Username Atau Password Salah");
-                System.out.println("");
-                Login();
+                System.out.println("Akun Tidak Ada / Daftar Akun Terlebih Dahulu");
+                Menu.MenuApp();
             }
         }
         catch(Exception e){

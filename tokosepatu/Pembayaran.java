@@ -6,8 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 
-
-public class transaksi {
+public class Pembayaran {
     
     static final String JDBC = "com.mysql.cj.jdbc.Driver";
     static final String URL = "jdbc:mysql://localhost/toko";
@@ -19,11 +18,11 @@ public class transaksi {
     static PreparedStatement ps;
 //    static Statement state;
     
-     public static String getEiger() throws Exception{
+     public static String bayarEiger() throws Exception{
         Class.forName(JDBC);
         con = DriverManager.getConnection(URL, USER, PASS);
         
-        String query = "SELECT kode_transaksi,kode_sepatu,nama_sepatu,id_pembeli,tanggal FROM tbl_transaksi WHERE kode_sepatu ='001 BGS'";
+        String query = "SELECT kode_pembayaran,tgl_bayar,total_bayar,kode_transaksi FROM tbl_pembayaran WHERE kode_transaksi ='1011'";
         ps = con.prepareStatement(query);
         
         
@@ -31,22 +30,21 @@ public class transaksi {
         
         while(rs.next()){
         
+            System.out.println("Kode Pembayaran : " + rs.getString("kode_pembayaran"));
+            System.out.println("Tanggal Bayar : " + rs.getDate("tgl_bayar"));
+            System.out.println("Total Bayar : " + rs.getString("total_bayar"));
             System.out.println("Kode Transaksi : " + rs.getString("kode_transaksi"));
-            System.out.println("Kode Sepatu : " + rs.getString("kode_sepatu"));
-            System.out.println("Nama Sepatu : " + rs.getString("nama_sepatu"));
-            System.out.println("ID Pembeli : " + rs.getString("id_pembeli"));
-            System.out.println("Tanggal : " + rs.getDate("tanggal"));
             System.out.println("---------------------------------------");
             break;
         }
         return null;
     }
      
-     public static String getArai() throws Exception{
+     public static String bayarArai() throws Exception{
         Class.forName(JDBC);
         con = DriverManager.getConnection(URL, USER, PASS);
         
-        String query = "SELECT kode_transaksi,kode_sepatu,nama_sepatu,id_pembeli,tanggal FROM tbl_transaksi WHERE kode_sepatu ='002 BGS'";
+        String query = "SELECT kode_pembayaran,tgl_bayar,total_bayar,kode_transaksi FROM tbl_pembayaran WHERE kode_transaksi ='1022'";
         ps = con.prepareStatement(query);
         
         
@@ -54,22 +52,21 @@ public class transaksi {
         
         while(rs.next()){
         
+            System.out.println("Kode Pembayaran : " + rs.getString("kode_pembayaran"));
+            System.out.println("Tanggal Bayar : " + rs.getDate("tgl_bayar"));
+            System.out.println("Total Bayar : " + rs.getString("total_bayar"));
             System.out.println("Kode Transaksi : " + rs.getString("kode_transaksi"));
-            System.out.println("Kode Sepatu : " + rs.getString("kode_sepatu"));
-            System.out.println("Nama Sepatu : " + rs.getString("nama_sepatu"));
-            System.out.println("ID Pembeli : " + rs.getString("id_pembeli"));
-            System.out.println("Tanggal : " + rs.getDate("tanggal"));
             System.out.println("---------------------------------------");
             break;
         }
         return null;
     }
      
-     public static String getLowa() throws Exception{
+     public static String bayarLowa() throws Exception{
         Class.forName(JDBC);
         con = DriverManager.getConnection(URL, USER, PASS);
         
-        String query = "SELECT kode_transaksi,kode_sepatu,nama_sepatu,id_pembeli,tanggal FROM tbl_transaksi WHERE kode_sepatu ='003 LMY'";
+        String query = "SELECT kode_pembayaran,tgl_bayar,total_bayar,kode_transaksi FROM tbl_pembayaran WHERE kode_transaksi ='1033'";
         ps = con.prepareStatement(query);
         
         
@@ -77,22 +74,21 @@ public class transaksi {
         
         while(rs.next()){
         
+            System.out.println("Kode Pembayaran : " + rs.getString("kode_pembayaran"));
+            System.out.println("Tanggal Bayar : " + rs.getDate("tgl_bayar"));
+            System.out.println("Total Bayar : " + rs.getString("total_bayar"));
             System.out.println("Kode Transaksi : " + rs.getString("kode_transaksi"));
-            System.out.println("Kode Sepatu : " + rs.getString("kode_sepatu"));
-            System.out.println("Nama Sepatu : " + rs.getString("nama_sepatu"));
-            System.out.println("ID Pembeli : " + rs.getString("id_pembeli"));
-            System.out.println("Tanggal : " + rs.getDate("tanggal"));
             System.out.println("---------------------------------------");
             break;
         }
         return null;
     }
      
-     public static String getConsina() throws Exception{
+     public static String bayarConsina() throws Exception{
         Class.forName(JDBC);
         con = DriverManager.getConnection(URL, USER, PASS);
         
-        String query = "SELECT kode_transaksi,kode_sepatu,nama_sepatu,id_pembeli,tanggal FROM tbl_transaksi WHERE kode_sepatu ='004 LMY'";
+        String query = "SELECT kode_pembayaran,tgl_bayar,total_bayar,kode_transaksi FROM tbl_pembayaran WHERE kode_transaksi ='1044'";
         ps = con.prepareStatement(query);
         
         
@@ -100,22 +96,21 @@ public class transaksi {
         
         while(rs.next()){
         
+            System.out.println("Kode Pembayaran : " + rs.getString("kode_pembayaran"));
+            System.out.println("Tanggal Bayar : " + rs.getDate("tgl_bayar"));
+            System.out.println("Total Bayar : " + rs.getString("total_bayar"));
             System.out.println("Kode Transaksi : " + rs.getString("kode_transaksi"));
-            System.out.println("Kode Sepatu : " + rs.getString("kode_sepatu"));
-            System.out.println("Nama Sepatu : " + rs.getString("nama_sepatu"));
-            System.out.println("ID Pembeli : " + rs.getString("id_pembeli"));
-            System.out.println("Tanggal : " + rs.getDate("tanggal"));
             System.out.println("---------------------------------------");
             break;
         }
         return null;
     }
      
-     public static String getLeague() throws Exception{
+     public static String bayarLeague() throws Exception{
         Class.forName(JDBC);
         con = DriverManager.getConnection(URL, USER, PASS);
         
-        String query = "SELECT kode_transaksi,kode_sepatu,nama_sepatu,id_pembeli,tanggal FROM tbl_transaksi WHERE kode_sepatu ='001 RN'";
+        String query = "SELECT kode_pembayaran,tgl_bayar,total_bayar,kode_transaksi FROM tbl_pembayaran WHERE kode_transaksi ='1055'";
         ps = con.prepareStatement(query);
         
         
@@ -123,22 +118,21 @@ public class transaksi {
         
         while(rs.next()){
         
+            System.out.println("Kode Pembayaran : " + rs.getString("kode_pembayaran"));
+            System.out.println("Tanggal Bayar : " + rs.getDate("tgl_bayar"));
+            System.out.println("Total Bayar : " + rs.getString("total_bayar"));
             System.out.println("Kode Transaksi : " + rs.getString("kode_transaksi"));
-            System.out.println("Kode Sepatu : " + rs.getString("kode_sepatu"));
-            System.out.println("Nama Sepatu : " + rs.getString("nama_sepatu"));
-            System.out.println("ID Pembeli : " + rs.getString("id_pembeli"));
-            System.out.println("Tanggal : " + rs.getDate("tanggal"));
             System.out.println("---------------------------------------");
             break;
         }
         return null;
     }
      
-     public static String getPiero() throws Exception{
+     public static String bayarPiero() throws Exception{
         Class.forName(JDBC);
         con = DriverManager.getConnection(URL, USER, PASS);
         
-        String query = "SELECT kode_transaksi,kode_sepatu,nama_sepatu,id_pembeli,tanggal FROM tbl_transaksi WHERE kode_sepatu ='002 RN'";
+        String query = "SELECT kode_pembayaran,tgl_bayar,total_bayar,kode_transaksi FROM tbl_pembayaran WHERE kode_transaksi ='1066'";
         ps = con.prepareStatement(query);
         
         
@@ -146,22 +140,21 @@ public class transaksi {
         
         while(rs.next()){
         
+            System.out.println("Kode Pembayaran : " + rs.getString("kode_pembayaran"));
+            System.out.println("Tanggal Bayar : " + rs.getDate("tgl_bayar"));
+            System.out.println("Total Bayar : " + rs.getString("total_bayar"));
             System.out.println("Kode Transaksi : " + rs.getString("kode_transaksi"));
-            System.out.println("Kode Sepatu : " + rs.getString("kode_sepatu"));
-            System.out.println("Nama Sepatu : " + rs.getString("nama_sepatu"));
-            System.out.println("ID Pembeli : " + rs.getString("id_pembeli"));
-            System.out.println("Tanggal : " + rs.getDate("tanggal"));
             System.out.println("---------------------------------------");
             break;
         }
         return null;
     }
      
-     public static String getSpecs() throws Exception{
+     public static String bayarSpecs() throws Exception{
         Class.forName(JDBC);
         con = DriverManager.getConnection(URL, USER, PASS);
         
-        String query = "SELECT kode_transaksi,kode_sepatu,nama_sepatu,id_pembeli,tanggal FROM tbl_transaksi WHERE kode_sepatu ='003 RN'";
+        String query = "SELECT kode_pembayaran,tgl_bayar,total_bayar,kode_transaksi FROM tbl_pembayaran WHERE kode_transaksi ='1077'";
         ps = con.prepareStatement(query);
         
         
@@ -169,22 +162,21 @@ public class transaksi {
         
         while(rs.next()){
         
+            System.out.println("Kode Pembayaran : " + rs.getString("kode_pembayaran"));
+            System.out.println("Tanggal Bayar : " + rs.getDate("tgl_bayar"));
+            System.out.println("Total Bayar : " + rs.getString("total_bayar"));
             System.out.println("Kode Transaksi : " + rs.getString("kode_transaksi"));
-            System.out.println("Kode Sepatu : " + rs.getString("kode_sepatu"));
-            System.out.println("Nama Sepatu : " + rs.getString("nama_sepatu"));
-            System.out.println("ID Pembeli : " + rs.getString("id_pembeli"));
-            System.out.println("Tanggal : " + rs.getDate("tanggal"));
             System.out.println("---------------------------------------");
             break;
         }
         return null;
     }
      
-     public static String getEagle() throws Exception{
+     public static String bayarEagle() throws Exception{
         Class.forName(JDBC);
         con = DriverManager.getConnection(URL, USER, PASS);
         
-        String query = "SELECT kode_transaksi,kode_sepatu,nama_sepatu,id_pembeli,tanggal FROM tbl_transaksi WHERE kode_sepatu ='004 RN'";
+        String query = "SELECT kode_pembayaran,tgl_bayar,total_bayar,kode_transaksi FROM tbl_pembayaran WHERE kode_transaksi ='1088'";
         ps = con.prepareStatement(query);
         
         
@@ -192,22 +184,21 @@ public class transaksi {
         
         while(rs.next()){
         
+            System.out.println("Kode Pembayaran : " + rs.getString("kode_pembayaran"));
+            System.out.println("Tanggal Bayar : " + rs.getDate("tgl_bayar"));
+            System.out.println("Total Bayar : " + rs.getString("total_bayar"));
             System.out.println("Kode Transaksi : " + rs.getString("kode_transaksi"));
-            System.out.println("Kode Sepatu : " + rs.getString("kode_sepatu"));
-            System.out.println("Nama Sepatu : " + rs.getString("nama_sepatu"));
-            System.out.println("ID Pembeli : " + rs.getString("id_pembeli"));
-            System.out.println("Tanggal : " + rs.getDate("tanggal"));
             System.out.println("---------------------------------------");
             break;
         }
         return null;
     }
      
-     public static String getConverse() throws Exception{
+     public static String bayarConverse() throws Exception{
         Class.forName(JDBC);
         con = DriverManager.getConnection(URL, USER, PASS);
         
-        String query = "SELECT kode_transaksi,kode_sepatu,nama_sepatu,id_pembeli,tanggal FROM tbl_transaksi WHERE kode_sepatu ='001 CSL'";
+        String query = "SELECT kode_pembayaran,tgl_bayar,total_bayar,kode_transaksi FROM tbl_pembayaran WHERE kode_transaksi ='1099'";
         ps = con.prepareStatement(query);
         
         
@@ -215,22 +206,21 @@ public class transaksi {
         
         while(rs.next()){
         
+            System.out.println("Kode Pembayaran : " + rs.getString("kode_pembayaran"));
+            System.out.println("Tanggal Bayar : " + rs.getDate("tgl_bayar"));
+            System.out.println("Total Bayar : " + rs.getString("total_bayar"));
             System.out.println("Kode Transaksi : " + rs.getString("kode_transaksi"));
-            System.out.println("Kode Sepatu : " + rs.getString("kode_sepatu"));
-            System.out.println("Nama Sepatu : " + rs.getString("nama_sepatu"));
-            System.out.println("ID Pembeli : " + rs.getString("id_pembeli"));
-            System.out.println("Tanggal : " + rs.getDate("tanggal"));
             System.out.println("---------------------------------------");
             break;
         }
         return null;
     }
      
-     public static String getVans() throws Exception{
+     public static String bayarVans() throws Exception{
         Class.forName(JDBC);
         con = DriverManager.getConnection(URL, USER, PASS);
         
-        String query = "SELECT kode_transaksi,kode_sepatu,nama_sepatu,id_pembeli,tanggal FROM tbl_transaksi WHERE kode_sepatu ='002 CSL'";
+        String query = "SELECT kode_pembayaran,tgl_bayar,total_bayar,kode_transaksi FROM tbl_pembayaran WHERE kode_transaksi ='1010'";
         ps = con.prepareStatement(query);
         
         
@@ -238,44 +228,21 @@ public class transaksi {
         
         while(rs.next()){
         
+            System.out.println("Kode Pembayaran : " + rs.getString("kode_pembayaran"));
+            System.out.println("Tanggal Bayar : " + rs.getDate("tgl_bayar"));
+            System.out.println("Total Bayar : " + rs.getString("total_bayar"));
             System.out.println("Kode Transaksi : " + rs.getString("kode_transaksi"));
-            System.out.println("Kode Sepatu : " + rs.getString("kode_sepatu"));
-            System.out.println("Nama Sepatu : " + rs.getString("nama_sepatu"));
-            System.out.println("ID Pembeli : " + rs.getString("id_pembeli"));
-            System.out.println("Tanggal : " + rs.getDate("tanggal"));
-            System.out.println("---------------------------------------");
-            break;
-        }
-        return null;
-    }
-     public static String getCompas() throws Exception{
-        Class.forName(JDBC);
-        con = DriverManager.getConnection(URL, USER, PASS);
-        
-        String query = "SELECT kode_transaksi,kode_sepatu,nama_sepatu,id_pembeli,tanggal FROM tbl_transaksi WHERE kode_sepatu ='003 CSL'";
-        ps = con.prepareStatement(query);
-        
-        
-        rs = ps.executeQuery();
-        
-        while(rs.next()){
-        
-            System.out.println("Kode Transaksi : " + rs.getString("kode_transaksi"));
-            System.out.println("Kode Sepatu : " + rs.getString("kode_sepatu"));
-            System.out.println("Nama Sepatu : " + rs.getString("nama_sepatu"));
-            System.out.println("ID Pembeli : " + rs.getString("id_pembeli"));
-            System.out.println("Tanggal : " + rs.getDate("tanggal"));
             System.out.println("---------------------------------------");
             break;
         }
         return null;
     }
      
-     public static String getDiadora() throws Exception{
+     public static String bayarCompas() throws Exception{
         Class.forName(JDBC);
         con = DriverManager.getConnection(URL, USER, PASS);
         
-        String query = "SELECT kode_transaksi,kode_sepatu,nama_sepatu,id_pembeli,tanggal FROM tbl_transaksi WHERE kode_sepatu ='004 CSL'";
+        String query = "SELECT kode_pembayaran,tgl_bayar,total_bayar,kode_transaksi FROM tbl_pembayaran WHERE kode_transaksi ='1111'";
         ps = con.prepareStatement(query);
         
         
@@ -283,16 +250,36 @@ public class transaksi {
         
         while(rs.next()){
         
+            System.out.println("Kode Pembayaran : " + rs.getString("kode_pembayaran"));
+            System.out.println("Tanggal Bayar : " + rs.getDate("tgl_bayar"));
+            System.out.println("Total Bayar : " + rs.getString("total_bayar"));
             System.out.println("Kode Transaksi : " + rs.getString("kode_transaksi"));
-            System.out.println("Kode Sepatu : " + rs.getString("kode_sepatu"));
-            System.out.println("Nama Sepatu : " + rs.getString("nama_sepatu"));
-            System.out.println("ID Pembeli : " + rs.getString("id_pembeli"));
-            System.out.println("Tanggal : " + rs.getDate("tanggal"));
             System.out.println("---------------------------------------");
             break;
         }
         return null;
     }
      
-}   
-
+     public static String bayarDiadora() throws Exception{
+        Class.forName(JDBC);
+        con = DriverManager.getConnection(URL, USER, PASS);
+        
+        String query = "SELECT kode_pembayaran,tgl_bayar,total_bayar,kode_transaksi FROM tbl_pembayaran WHERE kode_transaksi ='1012'";
+        ps = con.prepareStatement(query);
+        
+        
+        rs = ps.executeQuery();
+        
+        while(rs.next()){
+        
+            System.out.println("Kode Pembayaran : " + rs.getString("kode_pembayaran"));
+            System.out.println("Tanggal Bayar : " + rs.getDate("tgl_bayar"));
+            System.out.println("Total Bayar : " + rs.getString("total_bayar"));
+            System.out.println("Kode Transaksi : " + rs.getString("kode_transaksi"));
+            System.out.println("---------------------------------------");
+            break;
+        }
+        return null;
+    }
+    
+}
